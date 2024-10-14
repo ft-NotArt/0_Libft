@@ -1,7 +1,8 @@
-NAME	:=	libft.a
-CFLAGS	:=	-Wall -Wextra -Werror
+NAME		:=	libft.a
+TEST		:=	test
+CFLAGS		:=	-Wall -Wextra -Werror -g
 
-SRC		:=	ft_isalnum.c\
+SRC			:=	ft_isalnum.c\
 			ft_isdigit.c\
 			ft_memmove.c\
 			ft_strlcat.c\
@@ -22,22 +23,30 @@ SRC		:=	ft_isalnum.c\
 			ft_memcmp.c\
 			ft_strnstr.c\
 
+SRC_TEST	:= tests/test_ft_isalpha.c\
+
 OBJ			:=	$(SRC:.c=.o)
+
+OBJ_TEST	:=	$(SRC_TEST:.c=.o)
+
 ARFLAGS		:=	rcs
 
 %.o:		%.c
-			$(CC) $(CFLAGS) -c $< -o $@
+			@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME):	$(OBJ)
-			$(AR) $(ARFLAGS) $(NAME) $(OBJ)
+			@$(AR) $(ARFLAGS) $(NAME) $(OBJ)
+
+$(TEST):	$(OBJ) $(OBJ_TEST)
+			@$(CC) $(CFLAGS) $^ -o $@
 
 all:		$(NAME)
 
 clean:
-			rm -f $(OBJ)
+			@rm -f $(OBJ) $(OBJ_TEST)
 
 fclean:		clean
-			rm -f $(NAME)
+			@rm -f $(NAME) $(TEST)
 
 re:			fclean all
 
