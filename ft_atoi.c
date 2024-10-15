@@ -1,22 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/29 09:08:49 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/15 21:42:43 by anoteris         ###   ########.fr       */
+/*   Created: 2024/10/15 18:02:53 by anoteris          #+#    #+#             */
+/*   Updated: 2024/10/15 20:20:41 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+int ft_atoi(const char *nptr)
 {
-	while (*s && *s != c)
-		s++ ;
-	if (*s == c)
-		return (char *) s ;
-	return NULL ;
+	int result ;
+	int sign ;
+
+	result = 0 ;
+	sign = 1 ;
+	while (ft_isspace(*nptr))
+		nptr++ ;
+	if (*nptr == '+' || *nptr == '-')
+		if (*nptr++ == '-')
+			sign = -1 ;
+	while (ft_isdigit(*nptr))
+	{
+		result *= 10 ;
+		result += (*nptr - '0') ;
+		nptr++ ;
+	}
+	return result * sign ;
 }

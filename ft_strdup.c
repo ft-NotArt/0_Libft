@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/29 09:08:49 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/15 21:42:43 by anoteris         ###   ########.fr       */
+/*   Created: 2024/10/15 21:07:15 by anoteris          #+#    #+#             */
+/*   Updated: 2024/10/15 21:32:23 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char *ft_strdup(const char *s)
 {
-	while (*s && *s != c)
-		s++ ;
-	if (*s == c)
-		return (char *) s ;
-	return NULL ;
+	char *ptr ;
+
+	ptr = malloc(ft_strlen(s)) ;
+	ft_strlcpy(ptr, s, ft_strlen(s)) ;
+	return ptr ;
 }
