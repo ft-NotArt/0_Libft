@@ -23,7 +23,19 @@ SRC			:=	ft_isalnum.c\
 			ft_memcmp.c\
 			ft_strnstr.c\
 
-SRC_TEST	:= tests/test_ft_isalpha.c\
+SRC_TEST	:= tests/test_main.c\
+			tests/test_ft_isalpha.c\
+			tests/test_ft_isdigit.c\
+			tests/test_ft_isalnum.c\
+			tests/test_ft_isascii.c\
+			tests/test_ft_isprint.c\
+			tests/test_ft_strlen.c\
+			tests/test_ft_memset.c\
+			tests/test_ft_bzero.c\
+			tests/test_ft_memcpy.c\
+			tests/test_ft_memmove.c\
+			tests/test_ft_strlcpy.c\
+			tests/test_ft_strlcat.c\
 
 OBJ			:=	$(SRC:.c=.o)
 
@@ -38,7 +50,7 @@ $(NAME):	$(OBJ)
 			@$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 
 $(TEST):	$(OBJ) $(OBJ_TEST)
-			@$(CC) $(CFLAGS) $^ -o $@
+			@$(CC) $(CFLAGS) $^ -o $@ -lbsd
 
 all:		$(NAME)
 
