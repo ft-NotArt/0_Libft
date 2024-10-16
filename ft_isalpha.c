@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 06:55:22 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/04 09:29:52 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/10/16 02:39:20 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int ft_isalpha (int c)
 {
-	if ((c >= 'A' && c <= 'Z') ||
-		(c >= 'a' && c <= 'z'))
-		return 1 ;
-	return 0 ;
+	return NotArt_isalpha(c) ;
 }

@@ -5,7 +5,15 @@
 #include <limits.h>
 #include <stdlib.h>
 
-#define ft_isspace(c) ((c >= 9 && c <= 13) || c == ' ')
+#define NotArt_isalpha(c) ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+#define NotArt_isdigit(c) (c >= '0' && c <= '9')
+#define NotArt_isalnum(c) (NotArt_isalpha(c) || NotArt_isdigit(c))
+#define NotArt_isspace(c) ((c >= 9 && c <= 13) || c == ' ')
+#define NotArt_isprint(c) (c >= 32 && c <= 126)
+#define NotArt_isascii(c) (c >= 0 && c <= 127)
+
+
+
 
 int ft_isalpha (int c) ;
 int ft_isdigit (int c) ;

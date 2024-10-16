@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 07:19:40 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/04 09:29:41 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/10/16 02:54:32 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int ft_isprint (int c)
 {
-	if (c >= 32 && c <= 126)
-		return 1 ;
-	return 0 ;
+	return NotArt_isprint(c) ;
 }
