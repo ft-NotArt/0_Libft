@@ -16,6 +16,11 @@ SRC			:=	ft_isalnum.c ft_isdigit.c ft_isalpha.c ft_isprint.c ft_isascii.c	\
 				ft_calloc.c															\
 \
 				ft_atoi.c															\
+\
+\
+				ft_substr.c ft_strjoin.c ft_strtrim.c								\
+				ft_split.c															\
+				ft_itoa.c															\
 
 OBJ			:=	$(SRC:.c=.o)
 
@@ -36,6 +41,11 @@ SRC_TEST	:=	test_main.c															\
 				test_ft_calloc.c													\
 \
 				test_ft_atoi.c														\
+\
+\
+				test_ft_substr.c test_ft_strjoin.c test_ft_strtrim.c				\
+				test_ft_split.c														\
+				test_ft_itoa.c															\
 
 DIR_TEST	:= tests/
 
