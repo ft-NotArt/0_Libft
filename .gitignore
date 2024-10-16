@@ -1,4 +1,6 @@
 .vscode
 /tests
 /tests/*
+/txt
+/txt/*
 a.out

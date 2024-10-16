@@ -22,6 +22,8 @@ SRC			:=	ft_isalnum.c ft_isdigit.c ft_isalpha.c ft_isprint.c ft_isascii.c	\
 				ft_split.c															\
 				ft_itoa.c															\
 				ft_strmapi.c ft_striteri.c											\
+				ft_putchar_fd.c ft_putstr_fd.c										\
+				ft_putendl_fd.c ft_putnbr_fd.c										\
 
 OBJ			:=	$(SRC:.c=.o)
 
@@ -48,6 +50,8 @@ SRC_TEST	:=	test_main.c															\
 				test_ft_split.c														\
 				test_ft_itoa.c														\
 				test_ft_strmapi.c test_ft_striteri.c								\
+				test_ft_putchar_fd.c test_ft_putstr_fd.c							\
+				test_ft_putendl_fd.c test_ft_putnbr_fd.c							\
 
 DIR_TEST	:= tests/
 
@@ -70,7 +74,7 @@ clean:
 			@rm -f $(OBJ) $(OBJ_TEST)
 
 fclean:		clean
-			@rm -f $(NAME) $(TEST)
+			@rm -f $(NAME) $(TEST) tests/txt/*
 
 re:			fclean all
 
