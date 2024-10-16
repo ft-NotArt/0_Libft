@@ -21,6 +21,7 @@ SRC			:=	ft_isalnum.c ft_isdigit.c ft_isalpha.c ft_isprint.c ft_isascii.c	\
 				ft_substr.c ft_strjoin.c ft_strtrim.c								\
 				ft_split.c															\
 				ft_itoa.c															\
+				ft_strmapi.c ft_striteri.c											\
 
 OBJ			:=	$(SRC:.c=.o)
 
@@ -45,7 +46,8 @@ SRC_TEST	:=	test_main.c															\
 \
 				test_ft_substr.c test_ft_strjoin.c test_ft_strtrim.c				\
 				test_ft_split.c														\
-				test_ft_itoa.c															\
+				test_ft_itoa.c														\
+				test_ft_strmapi.c test_ft_striteri.c								\
 
 DIR_TEST	:= tests/
 
