@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 07:07:56 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/04 09:29:45 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/10/16 02:46:56 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int ft_isdigit (int c)
 {
-	if (c >= '0' && c <= '9')
-		return 1 ;
-	return 0 ;
+	return NotArt_isdigit(c) ;
 }

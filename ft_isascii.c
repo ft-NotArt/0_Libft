@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 07:13:57 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/04 09:29:49 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/10/16 03:02:43 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int ft_isascii (int c)
 {
-	if (c >= 0 && c <= 127)
-		return 1 ;
-	return 0 ;
+	return NotArt_isascii(c) ;
 }
