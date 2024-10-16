@@ -2,6 +2,7 @@
 #define LIBFT_H_
 
 #include <stdlib.h>
+#include <unistd.h>
 
 #define NotArt_isupper(c) (c >= 'A' && c <= 'Z')
 #define NotArt_islower(c) (c >= 'a' && c <= 'z')
@@ -46,5 +47,9 @@ char **ft_split(char const *s, char c) ;
 char *ft_itoa(int n) ;
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char)) ;
 void ft_striteri(char *s, void (*f)(unsigned int, char*)) ;
+void ft_putchar_fd(char c, int fd) ;
+void ft_putstr_fd(char *s, int fd) ;
+void ft_putendl_fd(char *s, int fd) ;
+void ft_putnbr_fd(int n, int fd) ;
 
 #endif
