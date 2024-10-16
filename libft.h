@@ -5,7 +5,9 @@
 #include <limits.h>
 #include <stdlib.h>
 
-#define NotArt_isalpha(c) ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+#define NotArt_isupper(c) (c >= 'A' && c <= 'Z')
+#define NotArt_islower(c) (c >= 'a' && c <= 'z')
+#define NotArt_isalpha(c) (NotArt_isupper(c) || NotArt_islower(c))
 #define NotArt_isdigit(c) (c >= '0' && c <= '9')
 #define NotArt_isalnum(c) (NotArt_isalpha(c) || NotArt_isdigit(c))
 #define NotArt_isspace(c) ((c >= 9 && c <= 13) || c == ' ')

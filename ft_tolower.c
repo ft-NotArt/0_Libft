@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 09:03:59 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/04 16:42:27 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/10/16 10:49:29 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int ft_tolower (int c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if (NotArt_isupper(c))
 		c += ('a' - 'A') ;
 	return c ;
 }
