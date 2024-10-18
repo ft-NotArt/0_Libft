@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 11:24:50 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/16 11:36:44 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/10/18 17:30:12 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int i ;
 
 	res = malloc(ft_strlen(s) + 1) ;
+	if (!res)
+		return NULL ;
 	i = 0 ;
 	while (s[i])
 	{
