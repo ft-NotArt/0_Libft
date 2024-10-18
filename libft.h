@@ -22,6 +22,7 @@ typedef struct		s_list
 #define NotArt_isprint(c) (c >= 32 && c <= 126)
 #define NotArt_isascii(c) (c >= 0 && c <= 127)
 #define NotArt_isnegative(c) (c < 0)
+#define NotArt_absolute(n) ((long) n * (1 + ((n < 0) * (-2))))
 
 
 int ft_isalpha (int c) ;

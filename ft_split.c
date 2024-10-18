@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 05:56:04 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/16 07:51:40 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/10/18 21:39:27 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int count_words(char const *s, char c)
 	}
 	return res ;
 }
-#include <stdio.h>
+
 char **ft_split(char const *s, char c)
 {
 	char **res ;
