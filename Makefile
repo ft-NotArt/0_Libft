@@ -1,5 +1,4 @@
 NAME		:=	libft.a
-BONUS		:=	bonus
 TEST		:=	test
 TESTB		:=	testb
 CFLAGS		:=	-Wall -Wextra -Werror -g -I .
@@ -108,9 +107,6 @@ ARFLAGS		:=	rcs
 $(NAME):	$(OBJ)
 			@$(AR) $(ARFLAGS) $(NAME) $<
 
-$(BONUS):	$(OBJ) $(OBJ_BONUS)
-			@$(AR) $(ARFLAGS) $(NAME) $^
-
 $(TEST):	$(OBJ) $(OBJ_TEST)
 			@$(CC) $(CFLAGS) $^ -o $@ -lbsd
 
@@ -118,6 +114,9 @@ $(TESTB):	$(OBJ) $(OBJ_BONUS) $(OBJ_TEST_B)
 			@$(CC) $(CFLAGS) $^ -o $@ -lbsd
 
 all:		$(NAME)
+
+bonus:		$(OBJ) $(OBJ_BONUS)
+			@$(AR) $(ARFLAGS) $(NAME) $^
 
 clean:
 			@rm -f $(OBJ) $(OBJ_TEST) $(OBJ_BONUS) $(OBJ_TEST_B)

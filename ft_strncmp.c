@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 14:01:12 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/16 09:29:18 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/10/19 00:19:47 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++ ;
 	if (i == n)
 		return 0 ;
-	return (s1[i] - s2[i]) ;
+	return (((unsigned char *) s1)[i] - ((unsigned char *) s2)[i]) ;
 }

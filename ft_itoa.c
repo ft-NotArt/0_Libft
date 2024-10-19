@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 07:30:30 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/18 21:39:19 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/10/19 01:21:58 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char *ft_itoa(int n)
 		n_cpy /= 10 ;
 		digits++;
 	}
-	res = ft_calloc(digits + NotArt_isnegative(n) + 1, sizeof(char)) ;
+	res = ft_calloc(digits + 1, sizeof(char)) ;
 	if (!res)
 		return NULL ;
 	if (n < 0)
