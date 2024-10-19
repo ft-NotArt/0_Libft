@@ -6,13 +6,13 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 08:11:20 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/16 15:38:43 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/10/20 06:33:08 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove (void *dest, const void * src, size_t n)
+void *ft_memmove (void *dest, const void *src, size_t n)
 {
 	char *char_src ;
 	char *cpy ;

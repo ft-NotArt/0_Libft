@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 05:02:48 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/18 17:30:36 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/10/19 01:56:56 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,8 @@ char *ft_strtrim(char const *s1, char const *set)
 	trim_end = ft_strlen(s1) - 1 ;
 	while (is_part_of(s1[trim_end], set))
 		trim_end-- ;
-	res = malloc(((trim_end + 1) - trim_start) + 1) ;
-	if (!res)
-		return NULL ;
+	if (trim_start > trim_end)
+		return ft_strdup("") ;
 	res = ft_substr(s1, trim_start, ((trim_end + 1) - trim_start)) ;
-
 	return res ;
 }

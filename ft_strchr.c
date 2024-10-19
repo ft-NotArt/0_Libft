@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 09:08:49 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/15 21:42:43 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/10/18 23:11:44 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char *ft_strchr(const char *s, int c)
 {
-	while (*s && *s != c)
+	while (*s && *s != (char) c)
 		s++ ;
-	if (*s == c)
+	if (*s == (char) c)
 		return (char *) s ;
 	return NULL ;
 }

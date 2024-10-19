@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 05:56:04 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/18 21:39:27 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/10/19 05:11:50 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,25 @@ static int count_words(char const *s, char c)
 	return res ;
 }
 
+static void free_split(char **to_free, int nb_free)
+{
+	while (nb_free >= 0)
+	{
+		free(to_free[nb_free]) ;
+		nb_free-- ;
+	}
+	free(to_free) ;
+}
+
 char **ft_split(char const *s, char c)
 {
 	char **res ;
-	int words ;
 	int i ;
 	int j ;
 
-	words = count_words(s, c) ;
-	res = malloc((words + 1) * sizeof(char *)) ;
+	res = malloc((count_words(s, c) + 1) * sizeof(char *)) ;
 	if (!res)
 		return NULL ;
-	res[words] = NULL ;
 	i = 0 ;
 	while (*s)
 	{
@@ -51,10 +58,13 @@ char **ft_split(char const *s, char c)
 			while (s[j] != c && s[j])
 				j++ ;
 			res[i++] = ft_substr(s, 0, j) ;
+			if (!res[i - 1])
+				return (free_split(res, i - 1), NULL) ;
 			s += j ;
 		}
 		if (*s)
 			s++ ;
 	}
+	res[i] = NULL ;
 	return res ;
 }
