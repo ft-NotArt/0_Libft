@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 07:36:24 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/04 16:38:35 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/10/20 16:18:58 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void *ft_memset(void *s, int c, size_t n)
 {
-	char *cpy ;
+	unsigned char *s_cpy ;
 
-	cpy = s ;
+	s_cpy = s ;
 	while (n--)
-		*cpy++ = c ;
+		*s_cpy++ = (unsigned char) c ;
 	return s ;
 }

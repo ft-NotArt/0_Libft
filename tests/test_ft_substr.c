@@ -22,7 +22,6 @@ void test_ft_substr ()
 
 	printf("len = 0 : ") ;
 	sub = ft_substr(string, 2, 0) ;
-	printf("\n~%s~\n", sub) ;
 	if (!*sub)
 		printf("✅\n") ;
 	else
