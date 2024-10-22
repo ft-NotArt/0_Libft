@@ -105,7 +105,7 @@ ARFLAGS		:=	rcs
 			@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME):	$(OBJ)
-			@$(AR) $(ARFLAGS) $(NAME) $<
+			@$(AR) $(ARFLAGS) $(NAME) $^
 
 $(TEST):	$(OBJ) $(OBJ_TEST)
 			@$(CC) $(CFLAGS) $^ -o $@ -lbsd
