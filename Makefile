@@ -105,7 +105,8 @@ ARFLAGS		:=	rcs
 			@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME):	$(OBJ)
-			@$(AR) $(ARFLAGS) $(NAME) $^
+			@$(AR) $(ARFLAGS) $(NAME) $<
+			@echo -e '\x1b[38;2;182;229;168m \tCompiled\x1b[38;2;51;133;26m $(NAME)\x1b[38;2;182;229;168m that include\x1b[38;2;73;190;37m $(FILES)'
 
 $(TEST):	$(OBJ) $(OBJ_TEST)
 			@$(CC) $(CFLAGS) $^ -o $@ -lbsd
@@ -117,12 +118,15 @@ all:		$(NAME)
 
 bonus:		$(OBJ) $(OBJ_BONUS)
 			@$(AR) $(ARFLAGS) $(NAME) $^
+			@echo -e '\x1b[38;2;182;229;168m \tCompiled\x1b[38;2;51;133;26m $(NAME)\x1b[38;2;182;229;168m that include\x1b[38;2;73;190;37m $(FILES)$(FILES_BONUS)'
 
 clean:
 			@rm -f $(OBJ) $(OBJ_TEST) $(OBJ_BONUS) $(OBJ_TEST_B)
+			@echo -e '\x1b[38;2;182;229;168m \tCleaned\x1b[38;2;73;190;37m $(OBJ)'
 
 fclean:		clean
 			@rm -f $(NAME) $(TEST) $(TESTB) $(DIR_TEST)/txt/*
+			@echo -e '\x1b[38;2;182;229;168m \tCleaned\x1b[38;2;51;133;26m $(NAME)'
 
 re:			fclean all
 
