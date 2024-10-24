@@ -72,4 +72,20 @@ void test_ft_strlcpy ()
 			printf("❌") ;
 	}
 	printf("\n") ;
+
+	char only[10] = "abcdefgh" ;
+
+	printf("dest = src : ") ;
+	if (strlcpy(only, only, 8) == ft_strlcpy(only, only, 8))
+		printf("✅ - ") ;
+	else
+		printf("❌ - ") ;
+	for (int i = 0; i < 10; i++)
+	{
+		if (a1[i] == a2[i])
+			printf("✅") ;
+		else
+			printf("❌") ;
+	}
+	printf("\n") ;
 }
