@@ -6,15 +6,15 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 09:03:59 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/16 10:49:36 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/10/20 07:32:25 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper (int c)
+int	ft_toupper(int c)
 {
-	if (NotArt_islower(c))
-		c -= ('a' - 'A') ;
-	return c ;
+	if ((c >= 'a' && c <= 'z'))
+		c -= ('a' - 'A');
+	return (c);
 }

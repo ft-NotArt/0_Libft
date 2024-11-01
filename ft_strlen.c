@@ -6,18 +6,18 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 07:29:27 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/04 16:37:24 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/10/19 07:07:56 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen (const char *s)
+size_t	ft_strlen(const char *s)
 {
-	size_t i ;
+	size_t	i;
 
-	i = 0 ;
+	i = 0;
 	while (s[i])
 		i++;
-	return i ;
+	return (i);
 }

@@ -6,13 +6,14 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 07:10:26 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/16 02:49:05 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/10/20 15:23:07 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum (int c)
+int	ft_isalnum(int c)
 {
-	return NotArt_isalnum(c) ;
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')
+		|| (c >= '0' && c <= '9'));
 }
