@@ -1,63 +1,158 @@
-NAME		=	libft.a
-CFLAGS		=	-Wall -Wextra -Werror -g
+# COLORS
 
-FILES		=	ft_isalnum ft_isdigit ft_isalpha ft_isprint ft_isascii	\
+GREEN			=	\x1b[0m\x1b[38;2;73;190;37m
+LIGHT_GREEN		=	\x1b[0m\x1b[38;2;182;229;168m
+DARK_GREEN		=	\x1b[1m\x1b[38;2;51;133;26m
+
+# TARGET
+
+NAME			=	libft.a
+
+# FLAGS
+
+MAKEFLAGS		+=	-s
+CFLAGS			=	-Wall -Wextra -Werror -I. -g
+ARFLAGS			=	rcs
+
+# FILES
+
+FILES			=	is/ft_isalnum is/ft_isdigit is/ft_isalpha				\
+					is/ft_isprint is/ft_isascii								\
 \
-				ft_toupper ft_tolower									\
+					str/ft_strlen											\
+					str/ft_strlcpy str/ft_strlcat							\
+					str/ft_strchr str/ft_strrchr							\
+					str/ft_strncmp											\
+					str/ft_strdup str/ft_substr								\
+					str/ft_strnstr str/ft_strtrim							\
+					str/ft_strjoin str/ft_split								\
+					str/ft_strmapi str/ft_striteri							\
+					str/ft_toupper str/ft_tolower							\
 \
-				ft_strlen ft_strncmp ft_strnstr							\
-				ft_strchr ft_strrchr									\
-				ft_strlcpy ft_strlcat									\
-				ft_strdup												\
+					mem/ft_memset mem/ft_bzero								\
+					mem/ft_memcpy mem/ft_memmove							\
+					mem/ft_memchr mem/ft_memcmp								\
+					mem/ft_calloc											\
 \
-				ft_memset ft_bzero ft_memmove							\
-				ft_memcpy ft_memchr ft_memcmp							\
-				ft_calloc												\
+					fd/ft_putchar_fd fd/ft_putstr_fd fd/ft_putendl_fd		\
+					fd/ft_putnbr_fd fd/ft_putunbr_fd						\
+					fd/ft_putlongnbr_fd fd/ft_puthexnbr_fd					\
 \
-				ft_atoi													\
+					math/ft_atoi math/ft_itoa								\
+					math/ft_intlen math/ft_uintlen math/ft_hexlen			\
+					math/ft_abs												\
+\
+
+SRC				=	$(addsuffix .c, $(FILES))
+OBJ				=	$(addsuffix .o, $(FILES))
+
+FILES_BONUS		=	list/ft_lstnew_bonus									\
+					list/ft_lstsize_bonus list/ft_lstlast_bonus				\
+					list/ft_lstadd_front_bonus list/ft_lstadd_back_bonus	\
+					list/ft_lstdelone_bonus list/ft_lstclear_bonus			\
+					list/ft_lstiter_bonus list/ft_lstmap_bonus				\
+\
+
+SRC_BONUS		=	$(addsuffix .c, $(FILES_BONUS))
+OBJ_BONUS		=	$(addsuffix .o, $(FILES_BONUS))
+
+# TEST
+
+FILES_TEST		=	test_main												\
+\
+					test_ft_isalnum test_ft_isdigit test_ft_isalpha			\
+					test_ft_isprint test_ft_isascii							\
+\
+					test_ft_strlen											\
+					test_ft_strlcpy test_ft_strlcat							\
+					test_ft_strchr test_ft_strrchr							\
+					test_ft_strncmp											\
+					test_ft_strdup test_ft_substr							\
+					test_ft_strnstr test_ft_strtrim							\
+					test_ft_strjoin test_ft_split							\
+					test_ft_strmapi test_ft_striteri						\
+					test_ft_toupper test_ft_tolower							\
+\
+					test_ft_memset test_ft_bzero							\
+					test_ft_memcpy test_ft_memmove							\
+					test_ft_memchr test_ft_memcmp							\
+					test_ft_calloc											\
+\
+					test_ft_putchar_fd test_ft_putstr_fd test_ft_putendl_fd	\
+					test_ft_putnbr_fd										\
+\
+					test_ft_atoi test_ft_itoa								\
+\
+
+DIR_TEST		=	tests/
+SRC_TEST		=	$(addprefix $(DIR_TEST), $(addsuffix .c, $(FILES_TEST)))
+OBJ_TEST		=	$(addprefix $(DIR_TEST), $(addsuffix .o, $(FILES_TEST)))
+
+FILES_TEST_B	=	test_main_bonus											\
+\
+					test_ft_isalnum test_ft_isdigit test_ft_isalpha			\
+					test_ft_isprint test_ft_isascii							\
+\
+					test_ft_toupper test_ft_tolower							\
+\
+					test_ft_strlen test_ft_strncmp test_ft_strnstr			\
+					test_ft_strchr test_ft_strrchr							\
+					test_ft_strlcpy test_ft_strlcat							\
+					test_ft_strdup											\
+\
+					test_ft_memset test_ft_bzero test_ft_memmove			\
+					test_ft_memcpy test_ft_memchr test_ft_memcmp			\
+					test_ft_calloc											\
+\
+					test_ft_atoi											\
 \
 \
-				ft_substr ft_strjoin ft_strtrim							\
-				ft_split												\
-				ft_itoa													\
-				ft_strmapi ft_striteri									\
-				ft_putchar_fd ft_putstr_fd								\
-				ft_putendl_fd ft_putnbr_fd								\
+					test_ft_substr test_ft_strjoin test_ft_strtrim			\
+					test_ft_split											\
+					test_ft_itoa											\
+					test_ft_strmapi test_ft_striteri						\
+					test_ft_putchar_fd test_ft_putstr_fd					\
+					test_ft_putendl_fd test_ft_putnbr_fd					\
+\
+					test_ft_lstnew test_ft_lstsize test_ft_lstlast			\
+					test_ft_lstadd_front test_ft_lstadd_back				\
+					test_ft_lstdelone test_ft_lstclear						\
+					test_ft_lstiter test_ft_lstmap							\
+\
 
-SRC			=	$(addsuffix .c, $(FILES))
-OBJ			=	$(addsuffix .o, $(FILES))
+SRC_TEST_B	=	$(addprefix $(DIR_TEST), $(addsuffix .c, $(FILES_TEST_B)))
+OBJ_TEST_B	=	$(addprefix $(DIR_TEST), $(addsuffix .o, $(FILES_TEST_B)))
 
-FILES_BONUS	=	ft_lstnew_bonus ft_lstsize_bonus ft_lstlast_bonus		\
-				ft_lstadd_front_bonus ft_lstadd_back_bonus				\
-				ft_lstdelone_bonus ft_lstclear_bonus					\
-				ft_lstiter_bonus ft_lstmap_bonus						\
 
-SRC_BONUS	=	$(addsuffix .c, $(FILES_BONUS))
-OBJ_BONUS	=	$(addsuffix .o, $(FILES_BONUS))
+# %.o:		%.c
+# 			@$(CC) $(CFLAGS) -c $< -o $@
 
-ARFLAGS		=	rcs
+# RULES
 
-%.o:		%.c
-			@$(CC) $(CFLAGS) -c $< -o $@
+all:			$(NAME)
 
-$(NAME):	$(OBJ)
-			@$(AR) $(ARFLAGS) $(NAME) $^
-			@echo -e '\x1b[38;2;182;229;168m \tCompiled\x1b[38;2;51;133;26m $(NAME)\x1b[38;2;182;229;168m that include\x1b[38;2;73;190;37m $(FILES)'
+$(NAME):		$(OBJ)
+				$(AR) $(ARFLAGS) $(NAME) $^
+				echo -e '$(LIGHT_GREEN) \tCompiled$(DARK_GREEN) $(NAME)$(LIGHT_GREEN) that include$(GREEN) $(FILES)'
 
-all:		$(NAME)
-
-bonus:		$(OBJ) $(OBJ_BONUS)
-			@$(AR) $(ARFLAGS) $(NAME) $^
-			@echo -e '\x1b[38;2;182;229;168m \tCompiled\x1b[38;2;51;133;26m $(NAME)\x1b[38;2;182;229;168m that include\x1b[38;2;73;190;37m $(FILES)$(FILES_BONUS)'
+bonus:			$(OBJ) $(OBJ_BONUS)
+				$(AR) $(ARFLAGS) $(NAME) $^
+				echo -e '$(LIGHT_GREEN) \tCompiled$(DARK_GREEN) $(NAME)$(LIGHT_GREEN) that include$(GREEN) $(FILES)$(FILES_BONUS)'
 
 clean:
-			@rm -f $(OBJ) $(OBJ_BONUS)
-			@echo -e '\x1b[38;2;182;229;168m \tCleaned\x1b[38;2;73;190;37m $(OBJ) $(OBJ_BONUS)'
+				rm -f $(OBJ) $(OBJ_BONUS) $(OBJ_TEST) $(OBJ_TEST_B)
+				echo -e '$(LIGHT_GREEN) \tCleaned$(GREEN) $(OBJ) $(OBJ_BONUS)'
 
-fclean:		clean
-			@rm -f $(NAME)
-			@echo -e '\x1b[38;2;182;229;168m \tCleaned\x1b[38;2;51;133;26m $(NAME)'
+fclean:			clean
+				rm -f $(NAME) test testb $(DIR_TEST)/txt/*
+				echo -e '$(LIGHT_GREEN) \tCleaned$(DARK_GREEN) $(NAME)'
 
-re:			fclean all
+re:				fclean all
 
-.PHONY:		all clean fclean re bonus
+test:			$(OBJ) $(OBJ_TEST)
+				$(CC) $(CFLAGS) $^ -o $@ -lbsd
+
+testb:			$(OBJ) $(OBJ_BONUS) $(OBJ_TEST_B)
+				$(CC) $(CFLAGS) $^ -o $@ -lbsd
+
+.PHONY:			all bonus clean fclean re test testb
