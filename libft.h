@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 07:14:00 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/20 15:25:36 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/11/11 18:53:56 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,17 +58,17 @@ void		*ft_calloc(size_t nmemb, size_t size);
 
 // Fd
 
-void		ft_putchar_fd(char c, int fd);
-void		ft_putstr_fd(char *s, int fd);
-void		ft_putendl_fd(char *s, int fd);
-void		ft_putnbr_fd(int n, int fd);
-void		ft_putunbr_fd(unsigned int n, int fd);
-void		ft_putlongnbr_fd(long long n, int fd);
+int			ft_putchar_fd(char c, int fd);
+int			ft_putstr_fd(char *s, int fd);
+int			ft_putendl_fd(char *s, int fd);
+int			ft_putnbr_fd(int n, int fd);
+int			ft_putunbr_fd(unsigned int n, int fd);
+int			ft_putlongnbr_fd(long long n, int fd);
 
 # define MAJ 'X'
 # define MIN 'x'
 
-void		ft_puthexnbr_fd(unsigned long n, int fd, char hex_case);
+int			ft_puthexnbr_fd(unsigned long n, int fd, char hex_case);
 
 // Math
 

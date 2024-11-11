@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_puthexnbr_fd.c                                  :+:      :+:    :+:   */
+/*   ft_printf_str_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 23:15:05 by anoteris          #+#    #+#             */
-/*   Updated: 2024/11/11 18:56:00 by anoteris         ###   ########.fr       */
+/*   Created: 2024/11/04 16:23:07 by anoteris          #+#    #+#             */
+/*   Updated: 2024/11/04 18:43:45 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_puthexnbr_fd(unsigned long n, int fd, char hex_case)
+bool	ft_isflag(int c)
 {
-	char	*base ;
-	int written ;
+	return (   c == '-'
+			|| c == '0'
+			|| c == '+'
+			|| c == ' '
+			|| c == '#') ;
+}
 
-	written = 0 ;
-	base = "0123456789abcdef" ;
-	if (hex_case == 'X')
-		base = "0123456789ABCDEF" ;
-	if (n > 15)
-		written += ft_puthexnbr_fd((n / 16), fd, hex_case);
-	return written + ft_putchar_fd((base[n % 16]), fd);
+bool	ft_isformat(int c)
+{
+	return (   c == 'c'
+			|| c == 's'
+			|| c == 'p'
+			|| c == 'd'
+			|| c == 'i'
+			|| c == 'u'
+			|| c == 'x'
+			|| c == 'X'
+			|| c == '%') ;
 }

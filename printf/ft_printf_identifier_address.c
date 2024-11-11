@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_puthexnbr_fd.c                                  :+:      :+:    :+:   */
+/*   ft_printf_identifier_address.c                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 23:15:05 by anoteris          #+#    #+#             */
-/*   Updated: 2024/11/11 18:56:00 by anoteris         ###   ########.fr       */
+/*   Created: 2024/11/05 00:46:05 by anoteris          #+#    #+#             */
+/*   Updated: 2024/11/11 18:42:40 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_puthexnbr_fd(unsigned long n, int fd, char hex_case)
+int ft_id_p(va_list args)
 {
-	char	*base ;
+	unsigned long	nb ;
 	int written ;
 
 	written = 0 ;
-	base = "0123456789abcdef" ;
-	if (hex_case == 'X')
-		base = "0123456789ABCDEF" ;
-	if (n > 15)
-		written += ft_puthexnbr_fd((n / 16), fd, hex_case);
-	return written + ft_putchar_fd((base[n % 16]), fd);
+	nb = va_arg(args, unsigned long) ;
+	if (!nb)
+		return write(STDOUT_FILENO, "(nil)", 5) ;
+	written += write(STDOUT_FILENO, "0x", 2) ;
+	written += ft_puthexnbr_fd(nb, STDOUT_FILENO, MIN) ;
+	return (written) ;
 }

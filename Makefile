@@ -11,7 +11,7 @@ NAME			=	libft.a
 # FLAGS
 
 MAKEFLAGS		+=	-s
-CFLAGS			=	-Wall -Wextra -Werror -I. -g
+CFLAGS			=	-Wall -Wextra -Werror -I. -g -D FD_MAX=$$(ulimit -n)
 ARFLAGS			=	rcs
 
 # FILES
@@ -41,6 +41,18 @@ FILES			=	is/ft_isalnum is/ft_isdigit is/ft_isalpha				\
 					math/ft_atoi math/ft_itoa								\
 					math/ft_intlen math/ft_uintlen math/ft_hexlen			\
 					math/ft_abs												\
+\
+					printf/ft_printf										\
+					printf/ft_printf_struct_init							\
+					printf/ft_printf_str_utils								\
+					printf/ft_printf_identifiers							\
+					printf/ft_printf_identifier_str							\
+					printf/ft_printf_identifier_nbr							\
+					printf/ft_printf_identifier_address						\
+					printf/ft_printf_field_str								\
+					printf/ft_printf_field_nbr								\
+					printf/ft_printf_field_address							\
+					printf/ft_printf_write_flag								\
 \
 
 SRC				=	$(addsuffix .c, $(FILES))
@@ -106,7 +118,6 @@ FILES_TEST_B	=	test_main_bonus											\
 \
 					test_ft_atoi											\
 \
-\
 					test_ft_substr test_ft_strjoin test_ft_strtrim			\
 					test_ft_split											\
 					test_ft_itoa											\
@@ -122,10 +133,6 @@ FILES_TEST_B	=	test_main_bonus											\
 
 SRC_TEST_B	=	$(addprefix $(DIR_TEST), $(addsuffix .c, $(FILES_TEST_B)))
 OBJ_TEST_B	=	$(addprefix $(DIR_TEST), $(addsuffix .o, $(FILES_TEST_B)))
-
-
-# %.o:		%.c
-# 			@$(CC) $(CFLAGS) -c $< -o $@
 
 # RULES
 
