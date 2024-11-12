@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 23:15:05 by anoteris          #+#    #+#             */
-/*   Updated: 2024/11/11 18:56:00 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/11/12 02:11:53 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_puthexnbr_fd(unsigned long n, int fd, char hex_case)
 
 	written = 0 ;
 	base = "0123456789abcdef" ;
-	if (hex_case == 'X')
+	if (hex_case == MAJ)
 		base = "0123456789ABCDEF" ;
 	if (n > 15)
 		written += ft_puthexnbr_fd((n / 16), fd, hex_case);

@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 21:21:16 by anoteris          #+#    #+#             */
-/*   Updated: 2024/11/10 17:29:19 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/11/12 03:03:14 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,15 @@
 # include <stdbool.h>
 # include <limits.h>
 
-// Maxi printf
+// <|===|> Maxi printf <|===|>
 
+/**
+ * @name printf
+ * @param format The string to write in the standard output, in which to format variables
+ * @param ... As much arguments as wanted, those variables are inserted in the written string (with %) or used as field width / precision values (with *)
+ * @return Returns how many characters were written. If NULL was given as format, returns -1. If write fails (ex : writting in a file where it can't), returns -2
+ * @author NotArt
+ */
 int	ft_printf(const char *format, ...);
 
 // Structure
