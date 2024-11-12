@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:08:09 by anoteris          #+#    #+#             */
-/*   Updated: 2024/11/11 18:56:25 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/11/12 19:57:08 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_putnbr_fd(int n, int fd)
 {
-	int written ;
+	int	written ;
 
 	written = 0 ;
 	if (n == -2147483648)
-		return ft_putstr_fd("-2147483648", fd);
+		return (ft_putstr_fd("-2147483648", fd));
 	else
 	{
 		if (n < 0)
@@ -28,6 +28,6 @@ int	ft_putnbr_fd(int n, int fd)
 		}
 		if (n > 9)
 			written += ft_putnbr_fd((n / 10), fd);
-		return written + ft_putchar_fd(((n % 10) + '0'), fd);
+		return (written + ft_putchar_fd(((n % 10) + '0'), fd));
 	}
 }

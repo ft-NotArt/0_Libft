@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 21:21:16 by anoteris          #+#    #+#             */
-/*   Updated: 2024/11/12 03:03:14 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/11/12 20:28:23 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,17 @@
 
 /**
  * @name printf
- * @param format The string to write in the standard output, in which to format variables
- * @param ... As much arguments as wanted, those variables are inserted in the written string (with %) or used as field width / precision values (with *)
- * @return Returns how many characters were written. If NULL was given as format, returns -1. If write fails (ex : writting in a file where it can't), returns -2
+ * @param format The string to write in the standard output,
+ * in which to format variables
+ * @param ... As much arguments as wanted,
+ * those variables are inserted in the written string (with %)
+ * or used as field width / precision values (with *)
+ * @return Returns how many characters were written.
+ * If NULL was given as format, returns -1.
+ * If write fails (ex : writting in a file where it can't), returns -2
  * @author NotArt
  */
-int	ft_printf(const char *format, ...);
+int			ft_printf(const char *format, ...);
 
 // Structure
 
@@ -67,7 +72,7 @@ int			ft_id_s(va_list args);
 int			ft_id_d(va_list args);
 int			ft_id_u(va_list args);
 int			ft_id_x(va_list args);
-int			ft_id_X(va_list args);
+int			ft_id_xx(va_list args);
 int			ft_id_p(va_list args);
 int			ft_id_percent(va_list args);
 

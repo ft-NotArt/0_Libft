@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 14:07:30 by anoteris          #+#    #+#             */
-/*   Updated: 2024/10/19 07:25:38 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/11/12 19:55:20 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_putchar_fd(char c, int fd)
 {
-	return write(fd, &c, 1);
+	return (write(fd, &c, 1));
 }
