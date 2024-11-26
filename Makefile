@@ -61,6 +61,8 @@ FILES			=	is/ft_isalnum is/ft_isdigit is/ft_isalpha				\
 					printf/ft_printf_field_address							\
 					printf/ft_printf_write_flag								\
 \
+					gnl/get_next_line										\
+\
 
 SRC				=	$(addsuffix .c, $(FILES))
 OBJ				=	$(addsuffix .o, $(FILES))
