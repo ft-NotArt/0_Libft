@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 07:14:00 by anoteris          #+#    #+#             */
-/*   Updated: 2024/12/05 01:08:31 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/12/12 05:21:13 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+# include <fcntl.h>
 
 // <|===|> Is <|===|>
 
@@ -487,6 +488,14 @@ int			ft_hexlen(unsigned long nb);
  * @author NotArt
  */
 long long	ft_abs(int nb);
+
+/**
+ * @name rand_uchar
+ * @return A random value (between 0 and 255) got from /dev/random,
+ * if open encountered a problem, return 1
+ * @author NotArt
+ */
+unsigned char	rand_uchar(void);
 
 // <|===|> Linked list <|===|>
 
