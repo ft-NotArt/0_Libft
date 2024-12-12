@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 05:12:48 by anoteris          #+#    #+#             */
-/*   Updated: 2024/12/12 05:17:18 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/12/12 07:48:17 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,23 @@ unsigned char	rand_uchar(void)
 
 	fd = open("/dev/random", O_RDONLY);
 	if (fd == -1)
+		return (1);
+	if (read(fd, c, 1) != 1)
 		c[0] = 1 ;
-	else
-		read(fd, c, 1);
 	close(fd);
 	return (c[0]);
+}
+
+int	rand_int(void)
+{
+	int				res ;
+	int				fd ;
+
+	fd = open("/dev/random", O_RDONLY);
+	if (fd == -1)
+		return (1);
+	if (read(fd, &res, sizeof(int)) != sizeof(int))
+		res = 1 ;
+	close(fd);
+	return (res);
 }

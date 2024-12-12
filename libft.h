@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 07:14:00 by anoteris          #+#    #+#             */
-/*   Updated: 2024/12/12 05:21:13 by anoteris         ###   ########.fr       */
+/*   Updated: 2024/12/12 07:42:43 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
  * @return Returns 1 if c matches the ascii code of a letter, 0 if not
  * @author NotArt
  */
-int			ft_isalpha(int c);
+int				ft_isalpha(int c);
 
 /**
  * @name isdigit
@@ -36,7 +36,7 @@ int			ft_isalpha(int c);
  * @return Returns 1 if c matches the ascii code of a digit, 0 if not
  * @author NotArt
  */
-int			ft_isdigit(int c);
+int				ft_isdigit(int c);
 
 /**
  * @name isalnum
@@ -44,7 +44,7 @@ int			ft_isdigit(int c);
  * @return Returns 1 if c matches the ascii code of a letter or a digit, 0 if not
  * @author NotArt
  */
-int			ft_isalnum(int c);
+int				ft_isalnum(int c);
 
 /**
  * @name isascii
@@ -52,7 +52,7 @@ int			ft_isalnum(int c);
  * @return Returns 1 if c matches any ascii code, 0 if not
  * @author NotArt
  */
-int			ft_isascii(int c);
+int				ft_isascii(int c);
 
 /**
  * @name isprint
@@ -61,7 +61,7 @@ int			ft_isascii(int c);
  * 0 if not
  * @author NotArt
  */
-int			ft_isprint(int c);
+int				ft_isprint(int c);
 
 /**
  * @name isspace
@@ -72,7 +72,7 @@ int			ft_isprint(int c);
  * It returns 0 if not
  * @author NotArt
  */
-int			ft_isspace(int c);
+int				ft_isspace(int c);
 
 // <|===|> Str <|===|>
 
@@ -82,7 +82,7 @@ int			ft_isspace(int c);
  * @return The string length
  * @author NotArt
  */
-size_t		ft_strlen(const char *s);
+size_t			ft_strlen(const char *s);
 
 /**
  * @name strlcpy
@@ -94,7 +94,7 @@ size_t		ft_strlen(const char *s);
  * @return The length of the copied string src
  * @author NotArt
  */
-size_t		ft_strlcpy(char *dest, const char *src, size_t size);
+size_t			ft_strlcpy(char *dest, const char *src, size_t size);
 
 /**
  * @name strlcat
@@ -109,7 +109,7 @@ size_t		ft_strlcpy(char *dest, const char *src, size_t size);
  * @return The length of both string cumulated
  * @author NotArt
  */
-size_t		ft_strlcat(char *dest, const char *src, size_t size);
+size_t			ft_strlcat(char *dest, const char *src, size_t size);
 
 /**
  * @name strchr
@@ -121,7 +121,7 @@ size_t		ft_strlcat(char *dest, const char *src, size_t size);
  * or, if c wasn't found, NULL
  * @author NotArt
  */
-char		*ft_strchr(const char *s, int c);
+char			*ft_strchr(const char *s, int c);
 
 /**
  * @name strrchr
@@ -132,7 +132,7 @@ char		*ft_strchr(const char *s, int c);
  * @return A pointer to the last iteration of c in s, or, if c wasn't found, NULL
  * @author NotArt
  */
-char		*ft_strrchr(const char *s, int c);
+char			*ft_strrchr(const char *s, int c);
 
 /**
  * @name strcmp
@@ -143,7 +143,7 @@ char		*ft_strrchr(const char *s, int c);
  * if the two strings appear to be identical, then 0 is returned
  * @author NotArt
  */
-int			ft_strcmp(const char *s1, const char *s2);
+int				ft_strcmp(const char *s1, const char *s2);
 
 /**
  * @name strncmp
@@ -156,7 +156,7 @@ int			ft_strcmp(const char *s1, const char *s2);
  * then 0 is returned
  * @author NotArt
  */
-int			ft_strncmp(const char *s1, const char *s2, size_t n);
+int				ft_strncmp(const char *s1, const char *s2, size_t n);
 
 /**
  * @name strdup
@@ -166,7 +166,7 @@ int			ft_strncmp(const char *s1, const char *s2, size_t n);
  * @return A copy of s, allocated on heap
  * @author NotArt
  */
-char		*ft_strdup(const char *s);
+char			*ft_strdup(const char *s);
 
 /**
  * @name substr
@@ -177,7 +177,7 @@ char		*ft_strdup(const char *s);
  * @return A copy of a part of s, allocated on heap
  * @author NotArt
  */
-char		*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
 
 /**
  * @name strnstr
@@ -189,7 +189,7 @@ char		*ft_substr(char const *s, unsigned int start, size_t len);
  * if not, it returns NULL
  * @author NotArt
  */
-char		*ft_strnstr(const char *big, const char *little, size_t len);
+char			*ft_strnstr(const char *big, const char *little, size_t len);
 
 /**
  * @name strtrim
@@ -200,7 +200,7 @@ char		*ft_strnstr(const char *big, const char *little, size_t len);
  * @return A trimmed copy of s1, allocated on heap
  * @author NotArt
  */
-char		*ft_strtrim(char const *s1, char const *set);
+char			*ft_strtrim(char const *s1, char const *set);
 
 /**
  * @name strjoin
@@ -209,7 +209,7 @@ char		*ft_strtrim(char const *s1, char const *set);
  * @return The junction of s1 and s2, allocated on heap
  * @author NotArt
  */
-char		*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strjoin(char const *s1, char const *s2);
 
 /**
  * @name split
@@ -219,7 +219,7 @@ char		*ft_strjoin(char const *s1, char const *s2);
  * @return An array of strings
  * @author NotArt
  */
-char		**ft_split(char const *s, char c);
+char			**ft_split(char const *s, char c);
 
 /**
  * @name strmapi
@@ -229,7 +229,7 @@ char		**ft_split(char const *s, char c);
  * after each of its characters passed through f
  * @author NotArt
  */
-char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /**
  * @name striteri
@@ -238,7 +238,7 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
  * @param f The function that operates on every character
  * @author NotArt
  */
-void		ft_striteri(char *s, void (*f)(unsigned int, char*));
+void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 /**
  * @name toupper
@@ -247,7 +247,7 @@ void		ft_striteri(char *s, void (*f)(unsigned int, char*));
  * modified to be upper case if it was a lower case
  * @author NotArt
  */
-int			ft_toupper(int c);
+int				ft_toupper(int c);
 
 /**
  * @name tolower
@@ -256,7 +256,7 @@ int			ft_toupper(int c);
  * modified to be lower case if it was an upper case
  * @author NotArt
  */
-int			ft_tolower(int c);
+int				ft_tolower(int c);
 
 // <|===|> Mem <|===|>
 
@@ -269,7 +269,7 @@ int			ft_tolower(int c);
  * @return The memory area s
  * @author NotArt
  */
-void		*ft_memset(void *s, int c, size_t n);
+void			*ft_memset(void *s, int c, size_t n);
 
 /**
  * @name bzero
@@ -278,7 +278,7 @@ void		*ft_memset(void *s, int c, size_t n);
  * @param n The size of the memory area
  * @author NotArt
  */
-void		ft_bzero(void *s, size_t n);
+void			ft_bzero(void *s, size_t n);
 
 /**
  * @name memcpy
@@ -289,7 +289,7 @@ void		ft_bzero(void *s, size_t n);
  * @return The memory area dest
  * @author NotArt
  */
-void		*ft_memcpy(void *dest, const void *src, size_t n);
+void			*ft_memcpy(void *dest, const void *src, size_t n);
 
 /**
  * @name memmove
@@ -301,7 +301,7 @@ void		*ft_memcpy(void *dest, const void *src, size_t n);
  * @return The memory area dest
  * @author NotArt
  */
-void		*ft_memmove(void *dest, const void *src, size_t n);
+void			*ft_memmove(void *dest, const void *src, size_t n);
 
 /**
  * @name memchr
@@ -312,7 +312,7 @@ void		*ft_memmove(void *dest, const void *src, size_t n);
  * or, if c wasn't found, NULL
  * @author NotArt
  */
-void		*ft_memchr(const void *s, int c, size_t n);
+void			*ft_memchr(const void *s, int c, size_t n);
 
 /**
  * @name memcmp
@@ -325,7 +325,7 @@ void		*ft_memchr(const void *s, int c, size_t n);
  * then 0 is returned
  * @author NotArt
  */
-int			ft_memcmp(const void *s1, const void *s2, size_t n);
+int				ft_memcmp(const void *s1, const void *s2, size_t n);
 
 /**
  * @name calloc
@@ -335,14 +335,14 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n);
  * @return A pointer to the freshly allocated on heap memory area filled by zeros
  * @author NotArt
  */
-void		*ft_calloc(size_t nmemb, size_t size);
+void			*ft_calloc(size_t nmemb, size_t size);
 
 /**
  * @name free_str_array
  * @param to_free An array of strings to free (the array must be null-terminated)
  * @author NotArt
  */
-void		free_str_array(char **to_free);
+void			free_str_array(char **to_free);
 
 // <|===|> Fd <|===|>
 
@@ -353,7 +353,7 @@ void		free_str_array(char **to_free);
  * @return How many characters were written
  * @author NotArt
  */
-int			ft_putchar_fd(char c, int fd);
+int				ft_putchar_fd(char c, int fd);
 
 /**
  * @name putstr_fd
@@ -362,7 +362,7 @@ int			ft_putchar_fd(char c, int fd);
  * @return How many characters were written
  * @author NotArt
  */
-int			ft_putstr_fd(char *s, int fd);
+int				ft_putstr_fd(char *s, int fd);
 
 /**
  * @name putendl_fd
@@ -372,7 +372,7 @@ int			ft_putstr_fd(char *s, int fd);
  * @return How many characters were written
  * @author NotArt
  */
-int			ft_putendl_fd(char *s, int fd);
+int				ft_putendl_fd(char *s, int fd);
 
 /**
  * @name putnbr_fd
@@ -381,7 +381,7 @@ int			ft_putendl_fd(char *s, int fd);
  * @return How many characters were written
  * @author NotArt
  */
-int			ft_putnbr_fd(int n, int fd);
+int				ft_putnbr_fd(int n, int fd);
 
 /**
  * @name putunbr_fd
@@ -391,7 +391,7 @@ int			ft_putnbr_fd(int n, int fd);
  * @return How many characters were written
  * @author NotArt
  */
-int			ft_putunbr_fd(unsigned int n, int fd);
+int				ft_putunbr_fd(unsigned int n, int fd);
 
 /**
  * @name putunbr_fd
@@ -401,7 +401,7 @@ int			ft_putunbr_fd(unsigned int n, int fd);
  * @return How many characters were written
  * @author NotArt
  */
-int			ft_putlongnbr_fd(long long n, int fd);
+int				ft_putlongnbr_fd(long long n, int fd);
 
 /**
  * @def For uppercase in puthexnbr_fd
@@ -422,7 +422,7 @@ int			ft_putlongnbr_fd(long long n, int fd);
  * @return How many characters were written
  * @author NotArt
  */
-int			ft_puthexnbr_fd(unsigned long n, int fd, char hex_case);
+int				ft_puthexnbr_fd(unsigned long n, int fd, char hex_case);
 
 // <|===|> Math <|===|>
 
@@ -434,7 +434,7 @@ int			ft_puthexnbr_fd(unsigned long n, int fd, char hex_case);
  * @return The number obtained from the string
  * @author NotArt
  */
-int			ft_atoi(const char *nptr);
+int				ft_atoi(const char *nptr);
 
 /**
  * @name atol
@@ -445,7 +445,7 @@ int			ft_atoi(const char *nptr);
  * @return The number obtained from the string
  * @author NotArt
  */
-long		ft_atol(const char *nptr);
+long			ft_atol(const char *nptr);
 
 /**
  * @name itoa
@@ -453,7 +453,7 @@ long		ft_atol(const char *nptr);
  * @return The string that represents the number given as argument
  * @author NotArt
  */
-char		*ft_itoa(int n);
+char			*ft_itoa(int n);
 
 /**
  * @name intlen
@@ -461,7 +461,7 @@ char		*ft_itoa(int n);
  * @return How many digits there is in the given number (also count the '-')
  * @author NotArt
  */
-int			ft_intlen(int nb);
+int				ft_intlen(int nb);
 
 /**
  * @name uintlen
@@ -470,7 +470,7 @@ int			ft_intlen(int nb);
  * @return How many digits there is in the given number
  * @author NotArt
  */
-int			ft_uintlen(unsigned int nb);
+int				ft_uintlen(unsigned int nb);
 
 /**
  * @name hexlen
@@ -479,7 +479,7 @@ int			ft_uintlen(unsigned int nb);
  * of the given number
  * @author NotArt
  */
-int			ft_hexlen(unsigned long nb);
+int				ft_hexlen(unsigned long nb);
 
 /**
  * @name abs
@@ -487,7 +487,7 @@ int			ft_hexlen(unsigned long nb);
  * @return The absolute value of the given number
  * @author NotArt
  */
-long long	ft_abs(int nb);
+long long		ft_abs(int nb);
 
 /**
  * @name rand_uchar
@@ -496,6 +496,14 @@ long long	ft_abs(int nb);
  * @author NotArt
  */
 unsigned char	rand_uchar(void);
+
+/**
+ * @name rand_int
+ * @return A random value (between 0 and INT_MAX) got from /dev/random,
+ * if open encountered a problem, return 1
+ * @author NotArt
+ */
+int				rand_int(void);
 
 // <|===|> Linked list <|===|>
 
@@ -514,7 +522,7 @@ typedef struct s_list
  * @return The freshly allocated on heap node
  * @author NotArt
  */
-t_list		*ft_lstnew(void *content);
+t_list			*ft_lstnew(void *content);
 
 /**
  * @name lstadd_front
@@ -522,7 +530,7 @@ t_list		*ft_lstnew(void *content);
  * @param new The node to add at the head of the list
  * @author NotArt
  */
-void		ft_lstadd_front(t_list **lst, t_list *new);
+void			ft_lstadd_front(t_list **lst, t_list *new);
 
 /**
  * @name lstsize
@@ -530,7 +538,7 @@ void		ft_lstadd_front(t_list **lst, t_list *new);
  * @return The size of the list
  * @author NotArt
  */
-int			ft_lstsize(t_list *lst);
+int				ft_lstsize(t_list *lst);
 
 /**
  * @name lstlast
@@ -538,7 +546,7 @@ int			ft_lstsize(t_list *lst);
  * @return The last node of the list
  * @author NotArt
  */
-t_list		*ft_lstlast(t_list *lst);
+t_list			*ft_lstlast(t_list *lst);
 
 /**
  * @name lstsecond_to_last
@@ -546,7 +554,7 @@ t_list		*ft_lstlast(t_list *lst);
  * @return The second to last node of the list
  * @author NotArt
  */
-t_list		*ft_lstsecond_to_last(t_list *lst);
+t_list			*ft_lstsecond_to_last(t_list *lst);
 
 /**
  * @name lstadd_back
@@ -554,7 +562,7 @@ t_list		*ft_lstsecond_to_last(t_list *lst);
  * @param new The node to add at the tail of the list
  * @author NotArt
  */
-void		ft_lstadd_back(t_list **lst, t_list *new);
+void			ft_lstadd_back(t_list **lst, t_list *new);
 
 /**
  * @name lstdelone
@@ -564,7 +572,7 @@ void		ft_lstadd_back(t_list **lst, t_list *new);
  * @param del The function used to delete the node
  * @author NotArt
  */
-void		ft_lstdelone(t_list *lst, void (*del)(void*));
+void			ft_lstdelone(t_list *lst, void (*del)(void*));
 
 /**
  * @name lstclear
@@ -575,7 +583,7 @@ void		ft_lstdelone(t_list *lst, void (*del)(void*));
  * @param del The function used to delete each node of the list
  * @author NotArt
  */
-void		ft_lstclear(t_list **lst, void (*del)(void*));
+void			ft_lstclear(t_list **lst, void (*del)(void*));
 
 /**
  * @name lstiter
@@ -584,7 +592,7 @@ void		ft_lstclear(t_list **lst, void (*del)(void*));
  * @param f The function to apply to the content of every node
  * @author NotArt
  */
-void		ft_lstiter(t_list *lst, void (*f)(void *));
+void			ft_lstiter(t_list *lst, void (*f)(void *));
 
 /**
  * @name lstmap
@@ -596,6 +604,6 @@ void		ft_lstiter(t_list *lst, void (*f)(void *));
  * @return The list that've been created
  * @author NotArt
  */
-t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list			*ft_lstmap(t_list *lst, void*(*f)(void *), void(*del)(void *));
 
 #endif
