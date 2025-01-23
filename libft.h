@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 07:14:00 by anoteris          #+#    #+#             */
-/*   Updated: 2025/01/23 06:36:15 by anoteris         ###   ########.fr       */
+/*   Updated: 2025/01/23 06:47:42 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -268,6 +268,16 @@ int				ft_tolower(int c);
  * @author NotArt
  */
 char	**str_array_insert(char **array, char *to_insert, int index);
+
+/**
+ * @name str_array_erase
+ * @param array An array of strings, must be null-terminated
+ * @param index The index at which to erase a string
+ * @author NotArt
+ */
+void	str_array_erase(char **array, int index);
+
+
 
 // <|===|> Mem <|===|>
 
