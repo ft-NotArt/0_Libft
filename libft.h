@@ -6,7 +6,7 @@
 /*   By: anoteris <noterisarthur42@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 07:14:00 by anoteris          #+#    #+#             */
-/*   Updated: 2024/12/12 07:42:43 by anoteris         ###   ########.fr       */
+/*   Updated: 2025/01/23 06:36:15 by anoteris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -257,6 +257,17 @@ int				ft_toupper(int c);
  * @author NotArt
  */
 int				ft_tolower(int c);
+
+/**
+ * @name str_array_insert
+ * @param array An array of strings, must be null-terminated
+ * @param to_insert A string, must be allocated on heap
+ * @param index The index at which to insert to_insert into array
+ * @note The given array will be freed
+ * @return The new array with to_insert at given index
+ * @author NotArt
+ */
+char	**str_array_insert(char **array, char *to_insert, int index);
 
 // <|===|> Mem <|===|>
 
